@@ -5,7 +5,6 @@ import HeroBillboardScroll from '@/components/sections/hero/HeroBillboardScroll'
 import AboutFeature from '@/components/sections/about/AboutFeature';
 import FeatureCardFive from '@/components/sections/feature/FeatureCardFive';
 import ProductCardOne from '@/components/sections/product/ProductCardOne';
-import PricingCardOne from '@/components/sections/pricing/PricingCardOne';
 import MetricCardOne from '@/components/sections/metrics/MetricCardOne';
 import TeamCardTwo from '@/components/sections/team/TeamCardTwo';
 import TestimonialCardTwo from '@/components/sections/testimonial/TestimonialCardTwo';
@@ -13,7 +12,7 @@ import FaqSplitText from '@/components/sections/faq/FaqSplitText';
 import ContactSplitForm from '@/components/sections/contact/ContactSplitForm';
 import FooterBase from '@/components/sections/footer/FooterBase';
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
-import { Award, Target, TrendingUp, Users, Zap, Brain, RotateCw, Package, DollarSign, Star, Sparkles, Calendar, Quote, Linkedin, Instagram, Twitter, Trophy } from "lucide-react";
+import { Award, Target, TrendingUp, Users, Zap, Brain, RotateCw, DollarSign, Star, Sparkles, Calendar, Quote, Linkedin, Instagram, Twitter, Trophy } from "lucide-react";
 
 export default function Home() {
   return (
@@ -40,7 +39,7 @@ export default function Home() {
           ]}
           brandName="CoachPro"
           button={{
-            text: "Get Started",
+            text: "Get In Touch",
             href: "contact"
           }}
         />
@@ -53,7 +52,7 @@ export default function Home() {
           tag="Pro Coaching"
           tagIcon={Trophy}
           buttons={[
-            { text: "Start Training", href: "contact" },
+            { text: "Get In Touch", href: "contact" },
             { text: "View Clients", href: "testimonial" }
           ]}
           imageSrc="https://pixabay.com/get/gcbd6ab898d3cee8b5f15a7be969e0821e5c5b56ab97c3beb0e18b61d13a96e7ec8a7f8e79849e6d96522b275f39fa06906d7ba5b8ba3da2f9aa469326b68a077_1280.jpg"
@@ -85,7 +84,7 @@ export default function Home() {
               title: "Elite Clientele",
               description: "Trusted by top-tier players who demand excellence, including professional athletes and rising basketball stars."
             }
-          ]}
+          ]
         />
       </div>
       
@@ -112,7 +111,6 @@ export default function Home() {
           title="Training Programs"
           description="Professional basketball training packages designed for serious players"
           tag="Programs"
-          tagIcon={Package}
           textboxLayout="default"
           gridVariant="uniform-all-items-equal"
           animationType="slide-up"
@@ -120,64 +118,41 @@ export default function Home() {
             {
               id: "1",
               name: "Individual Training",
-              price: "$150/session",
+              price: "Get In Touch",
               imageSrc: "https://pixabay.com/get/g48ad6b8f83aaa5fdd63011b03e6fe801bf73144df9f8f1de05d553b799377b8564d33273a0c2294f0cac37e2203a0624bfd14f749510f194ad43707d1b86b016_1280.jpg",
-              imageAlt: "One-on-one basketball training"
+              imageAlt: "One-on-one basketball training",
+              onProductClick: () => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }
             },
             {
               id: "2",
               name: "Group Sessions",
-              price: "$100/player",
+              price: "Get In Touch",
               imageSrc: "https://pixabay.com/get/g63e4eeab13651a0e8e506a0ad5153820fa51a686b0cad6c37a40c8e0f9f15d97bbe12ecbe605a041b5217619ccacfdbdd77fc667a38f4f83697550e4202a5d9f_1280.jpg",
-              imageAlt: "Group basketball training"
+              imageAlt: "Group basketball training",
+              onProductClick: () => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }
             },
             {
               id: "3",
               name: "Monthly Package",
-              price: "$500/month",
+              price: "Get In Touch",
               imageSrc: "https://pixabay.com/get/g6c7169a7c116cb0b2fda28c64ae9d328e06a3068012a66fb3e673a8fca4bd9a1912118f90b8ee8047176387fac6df8a4e4473ac47e9d5b7b675443593ac2b20c_1280.jpg",
-              imageAlt: "Monthly training program"
-            }
-          ]}
-        />
-      </div>
-      
-      <div id="pricing" data-section="pricing">
-        <PricingCardOne
-          title="Training Investment"
-          description="Choose the program that fits your commitment to excellence"
-          tag="Pricing"
-          tagIcon={DollarSign}
-          textboxLayout="default"
-          animationType="slide-up"
-          plans={[
-            {
-              id: "individual",
-              badge: "Most Popular",
-              badgeIcon: Star,
-              price: "$150",
-              subtitle: "Per individual session",
-              features: [
-                "One-on-one personalized training",
-                "Detailed skill assessment",
-                "Custom workout plan",
-                "Progress tracking",
-                "Direct coach feedback"
-              ]
-            },
-            {
-              id: "monthly",
-              badge: "Best Value",
-              badgeIcon: Sparkles,
-              price: "$500",
-              subtitle: "Monthly unlimited access",
-              features: [
-                "Unlimited training sessions",
-                "Group and individual options",
-                "Nutrition guidance",
-                "Mental coaching",
-                "24/7 support access"
-              ]
+              imageAlt: "Monthly training program",
+              onProductClick: () => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }
             }
           ]}
         />
@@ -252,7 +227,7 @@ export default function Home() {
                 { icon: Twitter, url: "https://twitter.com/coach_sarah" }
               ]
             }
-          ]}
+          ]
         />
       </div>
       
@@ -313,7 +288,7 @@ export default function Home() {
               imageSrc: "https://pixabay.com/get/g9ad29c769451bf598cddfe4951344f2afaddd9e0dd791586ad2770e00fb4d3a4fd0cd76ecb02e003515fc41e0617cac0307b730101f5dfb48893f8f8af76990f_1280.jpg",
               imageAlt: "Taylor Johnson"
             }
-          ]}
+          ]
         />
       </div>
       
@@ -344,7 +319,7 @@ export default function Home() {
               title: "Do you offer group training sessions?",
               content: "Yes, I offer both individual one-on-one sessions and small group training. Group sessions are limited to maintain the quality of instruction and individual attention each player receives."
             }
-          ]}
+          ]
         />
       </div>
       
@@ -367,7 +342,7 @@ export default function Home() {
           imageSrc="https://pixabay.com/get/g6c7169a7c116cb0b2fda28c64ae9d328e06a3068012a66fb3e673a8fca4bd9a1912118f90b8ee8047176387fac6df8a4e4473ac47e9d5b7b675443593ac2b20c_1280.jpg"
           imageAlt="Basketball training facility"
           mediaPosition="right"
-          buttonText="Start Training"
+          buttonText="Get In Touch"
         />
       </div>
       
@@ -379,7 +354,7 @@ export default function Home() {
               items: [
                 { label: "Individual Sessions", href: "contact" },
                 { label: "Group Training", href: "contact" },
-                { label: "Monthly Programs", href: "pricing" }
+                { label: "Monthly Programs", href: "contact" }
               ]
             },
             {
@@ -393,12 +368,12 @@ export default function Home() {
             {
               title: "Contact",
               items: [
-                { label: "Get Started", href: "contact" },
+                { label: "Get In Touch", href: "contact" },
                 { label: "Schedule Session", href: "contact" },
                 { label: "FAQ", href: "faq" }
               ]
             }
-          ]}
+          ]
         />
       </div>
     </ThemeProvider>
