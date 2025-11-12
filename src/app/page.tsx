@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
 import HeroBillboardScroll from '@/components/sections/hero/HeroBillboardScroll';
@@ -13,7 +13,7 @@ import FaqSplitText from '@/components/sections/faq/FaqSplitText';
 import ContactSplitForm from '@/components/sections/contact/ContactSplitForm';
 import FooterBase from '@/components/sections/footer/FooterBase';
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
-import { Award, Target, TrendingUp, Users, Zap, Brain, RotateCw, Package, DollarSign, Star, Sparkles, Calendar, Quote, Linkedin, Instagram, Twitter } from "lucide-react";
+import { Award, Target, TrendingUp, Users, Zap, Brain, RotateCw, Package, DollarSign, Star, Sparkles, Calendar, Quote, Linkedin, Instagram, Twitter, Trophy } from "lucide-react";
 
 export default function Home() {
   return (
@@ -51,7 +51,7 @@ export default function Home() {
           title="Elite Basketball Training"
           description="Transform your game with 20+ years of proven coaching experience. I've trained the best players and I'm ready to elevate your skills to championship level."
           tag="Pro Coaching"
-          tagIcon={Award}
+          tagIcon={Trophy}
           buttons={[
             { text: "Start Training", href: "contact" },
             { text: "View Clients", href: "testimonial" }
@@ -399,8 +399,6 @@ export default function Home() {
               ]
             }
           ]}
-          brandName="CoachPro"
-          copyrightText="© 2025 | CoachPro Basketball Training"
         />
       </div>
     </ThemeProvider>
