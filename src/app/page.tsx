@@ -5,6 +5,7 @@ import HeroBillboardScroll from '@/components/sections/hero/HeroBillboardScroll'
 import AboutFeature from '@/components/sections/about/AboutFeature';
 import FeatureCardFive from '@/components/sections/feature/FeatureCardFive';
 import ProductCardOne from '@/components/sections/product/ProductCardOne';
+import PricingCardOne from '@/components/sections/pricing/PricingCardOne';
 import MetricCardOne from '@/components/sections/metrics/MetricCardOne';
 import TeamCardTwo from '@/components/sections/team/TeamCardTwo';
 import TestimonialCardTwo from '@/components/sections/testimonial/TestimonialCardTwo';
@@ -84,7 +85,7 @@ export default function Home() {
               title: "Elite Clientele",
               description: "Trusted by top-tier players who demand excellence, including professional athletes and rising basketball stars."
             }
-          ]
+          ]}
         />
       </div>
       
@@ -153,6 +154,45 @@ export default function Home() {
                   contactSection.scrollIntoView({ behavior: 'smooth' });
                 }
               }
+            }
+          ]}
+        />
+      </div>
+      
+      <div id="pricing" data-section="pricing">
+        <PricingCardOne
+          title="Training Plans"
+          description="Choose the perfect training plan to accelerate your basketball development"
+          tag="Pricing"
+          textboxLayout="default"
+          animationType="slide-up"
+          plans={[
+            {
+              id: "1",
+              badge: "Popular Choice",
+              badgeIcon: Star,
+              price: "Contact for Pricing",
+              subtitle: "Personalized one-on-one training",
+              features: [
+                "Custom skill development plan",
+                "2 sessions per week",
+                "Video analysis included",
+                "Performance tracking"
+              ]
+            },
+            {
+              id: "2",
+              badge: "Best Value",
+              badgeIcon: Sparkles,
+              price: "Contact for Pricing",
+              subtitle: "Intensive monthly program",
+              features: [
+                "8 training sessions",
+                "Group and individual training",
+                "Nutrition guidance",
+                "Mental conditioning",
+                "24/7 support access"
+              ]
             }
           ]}
         />
@@ -227,7 +267,7 @@ export default function Home() {
                 { icon: Twitter, url: "https://twitter.com/coach_sarah" }
               ]
             }
-          ]
+          ]}
         />
       </div>
       
@@ -288,7 +328,7 @@ export default function Home() {
               imageSrc: "https://pixabay.com/get/g9ad29c769451bf598cddfe4951344f2afaddd9e0dd791586ad2770e00fb4d3a4fd0cd76ecb02e003515fc41e0617cac0307b730101f5dfb48893f8f8af76990f_1280.jpg",
               imageAlt: "Taylor Johnson"
             }
-          ]
+          ]}
         />
       </div>
       
@@ -319,7 +359,7 @@ export default function Home() {
               title: "Do you offer group training sessions?",
               content: "Yes, I offer both individual one-on-one sessions and small group training. Group sessions are limited to maintain the quality of instruction and individual attention each player receives."
             }
-          ]
+          ]}
         />
       </div>
       
