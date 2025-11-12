@@ -56,7 +56,7 @@ export default function Home() {
             { text: "Start Training", href: "contact" },
             { text: "View Clients", href: "testimonial" }
           ]}
-          imageSrc="https://pixabay.com/get/g63e4eeab13651a0e8e506a0ad5153820fa51a686b0cad6c37a40c8e0f9f15d97bbe12ecbe605a041b5217619ccacfdbdd77fc667a38f4f83697550e4202a5d9f_1280.jpg"
+          imageSrc="https://pixabay.com/get/gcbd6ab898d3cee8b5f15a7be969e0821e5c5b56ab97c3beb0e18b61d13a96e7ec8a7f8e79849e6d96522b275f39fa06906d7ba5b8ba3da2f9aa469326b68a077_1280.jpg"
           imageAlt="Professional basketball training session"
         />
       </div>
@@ -233,7 +233,7 @@ export default function Home() {
               name: "Coach Marcus Johnson",
               role: "Head Coach",
               description: "20+ years coaching elite players. Former college basketball player with deep understanding of player development and championship mentality.",
-              imageSrc: "https://pixabay.com/get/gcbff58faf9acd4875db47954020db659e642ad42faa39de5c080b7b9010465a03cc63f754b8e1ac62805a7047babc112c5439cedcef2896e2c7b6c2d43a9ff23_1280.jpg",
+              imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_32T51L3BHE8qqE8rXXWBwMZaYtk/uploaded-1762989180000-ursowxj4.png",
               imageAlt: "Head Coach Marcus Johnson",
               socialLinks: [
                 { icon: Linkedin, url: "https://linkedin.com/in/coach-marcus" },
